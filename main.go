@@ -1,9 +1,10 @@
-package pixivFetcher
+package main
 
-func init () {
-
+func init() {
+	parseFlag()
+	initLog()
 }
 
-func main () {
-
+func main() {
+	RunHTTPServer()
 }

@@ -1,4 +1,4 @@
-package pixivFetcher
+package main
 
 var (
 	// Version 程序版本
@@ -9,4 +9,6 @@ var (
 	CommitTime = "unknown"
 	// BuildTime 编译时间
 	BuildTime = "unknown"
+	// Debug 测试模式
+	Debug = false
 )
