@@ -20,9 +20,8 @@ builds:
       - amd64
       - arm
       - arm64
-    mod_timestamp: '{{ .CommitTimestamp }}'
     ldflags:
-      - -X main.Version={{.Version}} -X main.BuildTag={{.FullCommit}} -X main.BuildTime={{ .CommitDate }}
+      - -X main.Version={{.Version}} -X main.CommitHash={{.FullCommit}} -X main.CommitTime={{ .CommitDate }} -X main.BuildTime={{ .Timestamp }}
 archives:
   - name_template: '{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}{{ if .Arm }}v{{ .Arm }}{{ end }}'
     replacements:
