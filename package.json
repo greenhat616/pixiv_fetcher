@@ -1,0 +1,32 @@
+{
+  "name": "pixivFetcher",
+  "description": "Hitokoto Telegram bot based on go",
+  "repository": "https://source.hitokoto.cn/hitokoto/telegram_bot",
+  "author": "a632079 <a632079@qq.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "commit": "git-cz"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "11.0.0",
+    "@commitlint/config-conventional": "11.0.0",
+    "@commitlint/prompt": "11.0.0",
+    "@commitlint/prompt-cli": "11.0.0",
+    "commitizen": "4.2.3",
+    "cz-conventional-changelog": "3.3.0",
+    "husky": "4.3.8",
+    "lint-staged": "10.5.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "make precommit",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/@commitlint/prompt"
+    }
+  }
+}
