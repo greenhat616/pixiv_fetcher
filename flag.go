@@ -27,7 +27,7 @@ func parseFlag() {
 		os.Exit(0)
 	}
 	if v {
-		fmt.Printf("Pixiv Fetcher, A lightweight pixiv resource proxy. Authored by a632079\n版本: %s\n提交哈希: %s\n提交时间: %s 编译时间: %s\n编译环境: %s\n", Version, CommitHash, CommitTime, BuildTime, runtime.Version())
+		fmt.Printf("Pixiv Fetcher, A lightweight pixiv resource proxy. Authored by a632079\n版本: %s\n提交哈希: %s\n提交时间: %s\n编译时间: %s\n编译环境: %s\n", Version, CommitHash, CommitTime, BuildTime, runtime.Version())
 		os.Exit(0)
 	}
 }
