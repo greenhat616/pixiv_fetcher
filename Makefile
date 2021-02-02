@@ -1,5 +1,5 @@
 PROJECT_NAME := "Moe"
-PROJECT_PATH := "github.com/greenhat616/pixivFetcher"
+PROJECT_PATH := "github.com/greenhat616/pixiv_fetcher"
 PKG := "$(PROJECT_PATH)"
 PKG_LIST := $(shell go list ${PKG}/... | grep -v /vendor/)
 GO_FILES := $(shell find . -name '*.go' | grep -v /vendor/ | grep -v _test.go)
@@ -49,4 +49,5 @@ release:
 	@goreleaser release --rm-dist
 
 precommit: vet lint test
+	go fmt ./...
 	go mod tidy
