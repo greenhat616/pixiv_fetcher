@@ -107,8 +107,8 @@ func Handler(ctx *fasthttp.RequestCtx) {
 func RunHTTPServer() {
 	port := viper.GetInt("server.port")
 	dst := fmt.Sprintf(":%v", port)
+	log.Info("[proxy] HTTP 服务已启动，您可以通过 " + dst + " 访问")
 	if err := fasthttp.ListenAndServe(dst, Handler); err != nil {
 		log.Fatal(err)
 	}
-	log.Info("[proxy] HTTP 服务已启动，您可以通过 " + dst + " 访问")
 }
