@@ -21,7 +21,7 @@ builds:
       - arm
       - arm64
     ldflags:
-      - -X main.Version={{.Version}} -X main.CommitHash={{.FullCommit}} -X main.CommitTime={{ .CommitDate }} -X main.BuildTime={{ .Timestamp }}
+      - -X main.Version={{.Version}} -X main.CommitHash={{.FullCommit}} -X main.CommitTime={{ .CommitDate }} -X main.BuildTime={{ .Date }}
 archives:
   - name_template: '{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}{{ if .Arm }}v{{ .Arm }}{{ end }}'
     replacements:
