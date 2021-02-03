@@ -87,7 +87,7 @@ func checkHost(URL string) (bool, error) {
 			break
 		}
 		reg := regexp.MustCompile(r)
-		t = len(reg.FindAllString(u.Host, -1)) == 0
+		t = len(reg.FindAllString(u.Host, -1)) != 0
 	}
 	return t, nil
 }
