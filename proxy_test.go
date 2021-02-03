@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestCheckHost (t *testing.T) {
+func TestCheckHost(t *testing.T) {
 	ok, err := checkHost("https://www.pixiv.net/")
 	if err != nil {
 		t.Error(err)
