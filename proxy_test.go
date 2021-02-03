@@ -6,6 +6,7 @@ import (
 )
 
 func TestCheckHost(t *testing.T) {
+	isTest = true
 	ok, err := checkHost("https://www.pixiv.net/")
 	if err != nil {
 		t.Error(err)

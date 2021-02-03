@@ -1,9 +1,13 @@
 package main
 
+var isTest bool
+
 func init() {
-	parseFlag()
-	initLog()
-	initConfig()
+	if !isTest {
+		parseFlag()
+		initLog()
+		initConfig()
+	}
 }
 
 func main() {
