@@ -51,3 +51,4 @@ release:
 precommit: vet lint test
 	go fmt ./...
 	go mod tidy
+	git add .
